@@ -6,27 +6,6 @@ import Layout from '../components/layout'
 import Head from '../components/head'
 
 const BlogPage = () => {
-    // with markdown (.md) posts ->
-    // const data = useStaticQuery(graphql`
-    //     query {
-    //         allMarkdownRemark {
-    //             edges {
-    //                 node {
-    //                     frontmatter {
-    //                         title
-    //                         date
-    //                     }
-    //                     fields {
-    //                         slug
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-    // `)
-    // console.log(data)
-
-    // for Contentful CMS Blog Posts ->
     const data = useStaticQuery(graphql`
         query {
             allContentfulBlogPost(
