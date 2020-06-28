@@ -5,20 +5,6 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Layout from '../components/layout'
 import Head from '../components/head'
 
-// for markdown posts -->>
-// export const query = graphql`
-//     query($slug: String!) {
-//         markdownRemark(fields: { slug: { eq: $slug } }) {
-//             frontmatter {
-//                 title
-//                 date
-//             }
-//             html
-//         }
-//     }
-// `
-
-// for Contentful CMS Blog Posts -->>
 export const query = graphql`
     query($slug: String!) {
         contentfulBlogPost(slug: { eq: $slug }) {
